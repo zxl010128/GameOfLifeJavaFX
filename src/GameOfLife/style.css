@@ -1,0 +1,17 @@
+.check-box:selected > .box > .mark {
+    -fx-shape: "M2,0L5,4L8,0L10,0L10,2L6,5L10,8L10,10L8,10L5,6L2,10L0,10L0,8L4,5L0,2L0,0Z";
+    -fx-background-color: #78BE20;
+}
+
+.check-box:normal > .box > .mark {
+    -fx-background-color: white;
+}
+
+.check-box > .box {
+    -fx-outer-border: #c0d4e7;
+    -fx-body-color: white;
+    -fx-background-color: 
+       -fx-outer-border, 
+       -fx-body-color;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 4px, 0px;}

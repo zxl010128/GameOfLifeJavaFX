@@ -14,37 +14,37 @@ class GameOfLifeTest {
         GameOfLife gol = new GameOfLife();
 
         // Create a glider toward the bottom-right corner
-        gol.ensureAlive(9, 8);
-        gol.ensureAlive(8, 8);
-        gol.ensureAlive(7, 8);
-        gol.ensureAlive(9, 7);
-        gol.ensureAlive(8, 6);
+        gol.ensureAlive(19, 18);
+        gol.ensureAlive(18, 18);
+        gol.ensureAlive(17, 18);
+        gol.ensureAlive(19, 17);
+        gol.ensureAlive(18, 16);
 
         gol.tick();
-        assertTrue(gol.isAlive(9, 8));
-        assertTrue(gol.isAlive(8, 8));
-        assertTrue(gol.isAlive(8, 9));
-        assertTrue(gol.isAlive(7, 7));
-        assertTrue(gol.isAlive(9, 7));
+        assertTrue(gol.isAlive(19, 18));
+        assertTrue(gol.isAlive(18, 18));
+        assertTrue(gol.isAlive(18, 19));
+        assertTrue(gol.isAlive(17, 17));
+        assertTrue(gol.isAlive(19, 17));
 
-        assertFalse(gol.isAlive(7, 8));
-        assertFalse(gol.isAlive(8, 6));
+        assertFalse(gol.isAlive(17, 18));
+        assertFalse(gol.isAlive(18, 16));
 
         gol.tick();
-        assertTrue(gol.isAlive(9, 8));
-        assertTrue(gol.isAlive(8, 9));
-        assertTrue(gol.isAlive(9, 9));
-        assertTrue(gol.isAlive(7, 8));
-        assertTrue(gol.isAlive(9, 7));
+        assertTrue(gol.isAlive(19, 18));
+        assertTrue(gol.isAlive(18, 19));
+        assertTrue(gol.isAlive(19, 19));
+        assertTrue(gol.isAlive(17, 18));
+        assertTrue(gol.isAlive(19, 17));
 
         //Check to see it wraps around horizontally
         gol.tick();
-        assertTrue(gol.isAlive(0, 8));
+        assertTrue(gol.isAlive(0, 18));
 
         //Check to see it wraps around vertically
         gol.tick();
         gol.tick();
-        assertTrue(gol.isAlive(9, 0));
+        assertTrue(gol.isAlive(19, 0));
     }
 
     @Test

@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
 /**
@@ -17,6 +18,9 @@ import javafx.util.Duration;
  *
  */
 public class GameOfLifeController {
+
+    @FXML
+    private Pane pane;
 
     @FXML
     private GridPane gridPane;
@@ -38,22 +42,22 @@ public class GameOfLifeController {
         newGame = new GameOfLife();
         timeline = new Timeline();
         timeline.setCycleCount(Timeline.INDEFINITE);
-        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(500), new EventHandler<ActionEvent>(){
-            public void handle(ActionEvent e) {
-                newGame.tick();
-            }
-        }));
+        timeline.getKeyFrames().add(new KeyFrame(Duration.millis(1000), e -> { newGame.tick(); }));
     }
 
     @FXML
     public void initialize() {
-
+        // keep gridPane at original size    
+        pane.setStyle("-fx-background-color: #FEFFF2;");
+        Tick.setStyle("-fx-background-color: #0DB02B;");
+        Play.setStyle("-fx-background-color: #E4002B;");
+        Clear.setStyle("-fx-background-color: #009CDE;");
         for (int x = 0; x < 20; x++) {
 
             for (int y = 0; y < 20; y++) {
 
                 CheckBox checkBox = new CheckBox();
-                checkBox.setStyle("selected-box-color: lime; box-color: red; mark-color: blue;");
+                //checkBox.setStyle("-fx-body-color: #C4D600;");
                 GridPane.setColumnIndex(checkBox, x);
                 GridPane.setRowIndex(checkBox, y);
 
