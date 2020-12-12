@@ -64,7 +64,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
-      <VBox alignment="BASELINE_CENTER" layoutX="666.0" layoutY="256.0" prefHeight="217.0" prefWidth="111.0" spacing="50.0">
+      <VBox alignment="BASELINE_CENTER" layoutX="673.0" layoutY="247.0" prefHeight="217.0" prefWidth="111.0" spacing="50.0">
          <children>
             <Button fx:id="Play" mnemonicParsing="false" onMouseClicked="#clickPlayButton" prefHeight="35.0" prefWidth="90.0" text="Play">
                <font>

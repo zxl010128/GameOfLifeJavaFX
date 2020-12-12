@@ -29,6 +29,7 @@ public class GameOfLifeApplication extends Application {
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
