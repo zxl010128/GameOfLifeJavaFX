@@ -2,16 +2,13 @@ package GameOfLife;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
-import javafx.beans.binding.NumberBinding;
-import javafx.beans.binding.Bindings;
+
 /**
  * A JavaFX controller for the Conway's Game of Live Application.
  *
