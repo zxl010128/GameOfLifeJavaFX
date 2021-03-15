@@ -48,9 +48,15 @@ public class GameOfLifeController {
         // keep gridPane at original size    
 
         pane.setStyle("-fx-background-color: #FEFFF2;");
-        Tick.setStyle("-fx-background-color: #0DB02B;");
-        Play.setStyle("-fx-background-color: #E4002B;");
-        Clear.setStyle("-fx-background-color: #009CDE;");
+        Tick.setStyle("-fx-background-color: #d8bdde;");
+        Play.setStyle("-fx-background-color: #c9d1a9;");
+        Clear.setStyle("-fx-background-color: #bdcfde;");
+
+        if (Play.getText().equals("Stop")) {
+            timeline.stop();
+            Play.setText("Play");
+        }
+
         for (int x = 0; x < 20; x++) {
 
             for (int y = 0; y < 20; y++) {
@@ -78,12 +84,14 @@ public class GameOfLifeController {
         if (Play.getText().equals("Stop")) {
             timeline.stop();
             Play.setText("Play");
+            Play.setStyle("-fx-background-color: #c9d1a9;");
             return;
         }
 
         // start playing it and change the button to "Stop"
         timeline.play();
         Play.setText("Stop");
+        Play.setStyle("-fx-background-color: #e0b8b8;");
     }
 
     @FXML
