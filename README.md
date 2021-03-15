@@ -13,4 +13,6 @@ Consider [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_o
 > The initial pattern constitutes the *seed* of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed; births and deaths occur simultaneously, and the discrete moment at which this happens is sometimes called a *tick*. Each generation is a pure function of the preceding one. The rules continue to be applied repeatedly to create further generations.
 
 ## About it
-Implimentation of this game in Java with JavaFX and Junit test.
+Implementation of this game in Java with JavaFX module and Junit test module. The front end was redesigned with brightened colors and friendly interaction.
+
+Please note that any copying behaviors and inappropriate paraphrasing might cause misconduct or undermine academic integrity by your institution. All rights reserved by Xinlei Zhang.
